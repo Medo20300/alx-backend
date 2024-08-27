@@ -1,17 +1,19 @@
-# Translations template for PROJECT.
+# Arabic translations for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-08-27 12:25+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-08-27 12:27+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,6 +50,10 @@ msgid "Got unexpected extra argument ({args})"
 msgid_plural "Got unexpected extra arguments ({args})"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/core.py:1428
 msgid "DeprecationWarning: The command {name!r} is deprecated."
@@ -74,6 +80,10 @@ msgid "Takes {nargs} values but 1 was given."
 msgid_plural "Takes {nargs} values but {len} were given."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/core.py:2778
 msgid "env var: {var}"
@@ -146,6 +156,10 @@ msgid "Did you mean {possibility}?"
 msgid_plural "(Possible options: {possibilities})"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/exceptions.py:262
 msgid "unknown error"
@@ -168,6 +182,10 @@ msgid "Option {name!r} requires an argument."
 msgid_plural "Option {name!r} requires {nargs} arguments."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/shell_completion.py:318
 msgid "Shell completion is not supported for Bash versions older than 4.4."
@@ -212,12 +230,20 @@ msgid "{value!r} is not {choice}."
 msgid_plural "{value!r} is not one of {choices}."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/types.py:394
 msgid "{value!r} does not match the format {format}."
 msgid_plural "{value!r} does not match the formats {formats}."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/myFlask/lib/python3.7/site-packages/click/types.py:414
 msgid "{value!r} is not a valid {number_type}."
@@ -276,6 +302,10 @@ msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: /home/medhat/alx-backend/0x02-i18n/templates/4-index.html:4
 #: /home/medhat/alx-backend/0x02-i18n/templates/5-index.html:4
