@@ -1,50 +1,53 @@
 #!/usr/bin/env python3
-'''Task 2: Get locale from request
-'''
-
+"""Module for task 3
+"""
 from flask import Flask, render_template, request
 from flask_babel import Babel
 
+app = Flask(__name__)
+
+app.url_map.strict_slashes = False
+
 
 class Config:
-    '''Config class'''
-
-    DEBUG = True
+    """Represents a Flask Babel configuration.
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
-app = Flask(__name__)
 app.config.from_object(Config)
-app.url_map.strict_slashes = False
 babel = Babel(app)
+
+
+@app.route("/")
+def index_3() -> str:
+    """The index function displays the home page of the web application.
+
+    Returns:
+        str: contents of the home page.
+    """
+    return render_template("3-index.html")
 
 
 @babel.localeselector
 def get_locale() -> str:
-    """Retrieves the locale for a web page.
+    """Determines the best match for the client's preferred language.
+
+    This function uses Flask's request object to access the client's preferred
+    languages and the app's supported languages (defined in the Config class)
+    to determine the best match. The best match is then returned as the locale.
 
     Returns:
-        str: best match
+        str: The locale code for the best match (e.g. "en", "fr").
     """
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
-
-
-@app.route('/')
-def index() -> str:
-    '''default route
-
-    Returns:
-        html: homepage
-    '''
-    return render_template("3-index.html")
-
-# uncomment this line and comment the @babel.localeselector
-# you get this error:
-# AttributeError: 'Babel' object has no attribute 'localeselector'
-# babel.init_app(app, locale_selector=get_locale)
+    # Get list of supported languages from Config
+    supported_languages = app.config["LANGUAGES"]
+    # Use request.accept_languages to get the best match
+    best_match = request.accept_languages.best_match(supported_languages)
+    return best_match
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
